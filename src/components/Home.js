@@ -6,7 +6,6 @@ import Cart from './Cart'
 import ProductCard from './ProductCard'
 
 export default function Home() {
-  const {cart, addToCart} = useContext(CartNum)
   const [ products, setProducts ] = useState([])
 
   useEffect(() => { 
@@ -21,6 +20,10 @@ export default function Home() {
         {products.map((product) => 
             <ProductCard key={product.id} product={product} />
         )}
+
+        <div className="addedToCart">
+            &#10003; Added to cart
+        </div>
     </div>
   )
 }

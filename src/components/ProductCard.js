@@ -3,7 +3,16 @@ import { useContext } from 'react'
 import NumInCart, { CartNum } from '../context/NumInCart'
 
 export default function ProductCard({product}) {
+  const addedToCartNotification = document.querySelector(".addedToCart");
+
   const { addToCart } = useContext(CartNum)
+  function popUp() {
+    addedToCartNotification.classList.add('active');
+    setTimeout(() => {
+        addedToCartNotification.classList.remove('active');
+    }, 1000);
+  }
+  
   return (
     <div className='productCard'>
         <div className="productImageContainer">
@@ -14,7 +23,7 @@ export default function ProductCard({product}) {
         <span hidden className="productId">{product.id}</span>
         <span className="rating">{product.rating}/5 ⭐️</span>
         <span className="price">£{product.price}</span>
-        <button className='addToCartBtn' onClick={()=> addToCart()}>Add to Cart</button>
+        <button className='addToCartBtn' onClick={()=> {addToCart(); popUp()}}>Add to Cart</button>
     </div>
   )
 }
