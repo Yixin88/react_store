@@ -15,27 +15,27 @@ export default function Home() {
 
 
   return (
-    <div>Home
-        {/* {products.map((product) => {
+    <div className='selection'>
+        {products.map((product) => {
             return (
-                <div key={product.id}>
+                <div key={product.id} className='productCard'>
                     <div className="productImageContainer">
-                        <img className="thumbnail" src={product.img[0]} />
+                        <img className="thumbnail" src={product.images[0]} />
                     </div>
                     <h2 className="title" >{product.title}</h2>
                     <h3>{product.category}</h3>
                     <span hidden className="productId">{product.id}</span>
                     <span className="rating">{product.rating}/5 ⭐️</span>
                     <span className="price">£{product.price}</span>
-                    <button className="addToCartBtn" >Add to cart</button>
+                    <button className='addToCartBtn' onClick={()=> addToCart()}>Add to Cart</button>
                 </div>
             )
-        })} */}
+        })}
 
 
 
 
-        <button onClick={()=> addToCart()}>Add to Cart</button>
+        
     </div>
   )
 }
