@@ -1,33 +1,36 @@
 import React from 'react'
+import { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import { CartNum } from '../context/NumInCart'
 
 export default function RootLayout() {
+  const {cart, addToCart} = useContext(CartNum)
   return (
     <>
-        <header class="mainHeader">
-            <nav class="mainNav">
-                <img src={require("../assets/store_logo.png")} alt="Amzon Logo" class="logo mainLogo" />
-                <div class="searchContainer">
-                    <select class="dropdownMenu">
-                        <option value="all" selected>All</option>
+        <header className="mainHeader">
+            <nav className="mainNav">
+                <NavLink to="/"><img src={require("../assets/store_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
+                <div className="searchContainer">
+                    <select className="dropdownMenu">
+                        <option value="all">All</option>
                         <option value="books">Books</option>
                         <option value="men">Men</option>
                         <option value="woman">Woman</option>
                     </select>
                     <input type="text" name="search" id="search" placeholder="Search" />
-                    <button class="searchIconContainer">
-                        <img class="searchIcon" src={require("../assets/search.png")} alt="search button" />
+                    <button className="searchIconContainer">
+                        <img className="searchIcon" src={require("../assets/search.png")} alt="search button" />
                     </button>
                 </div>
-                <div class="headerRight">
-                    <span class="user">Hello User</span>
-                    <div class="cartDetail">
-                        <img class="shoppingCartIcon" src={require("../assets/shopping-cart.png")} alt="shopping cart icon" />
-                        <span class="cartNumber">0</span>
+                <div className="headerRight">
+                    <span className="user">Hello User</span>
+                    <div className="cartDetail">
+                        <img className="shoppingCartIcon" src={require("../assets/shopping-cart.png")} alt="shopping cart icon" />
+                        <span className="cartNumber">{cart}</span>
                     </div>
                 </div>
             </nav>
-            <nav class="subHeader">
+            <nav className="subHeader">
                 <NavLink to='deals'>Last Minute Deals</NavLink>
                 <NavLink to='gift'>Gift Cards & Top Up</NavLink>
                 <NavLink to='DimeVideo'>Dime Video</NavLink>
