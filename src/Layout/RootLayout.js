@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import Footer from '../components/Footer'
 import { CartNum } from '../context/NumInCart'
 
 export default function RootLayout() {
@@ -39,6 +40,7 @@ export default function RootLayout() {
             </nav>
         </header>
         <Outlet />
+        <Footer />
     </>
   )
 }

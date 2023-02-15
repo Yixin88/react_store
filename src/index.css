@@ -624,7 +624,7 @@ footer {
   border: solid rgb(118, 118, 118);
 }
 
-.checkoutBtn:hover, .loginFormContainer > div > input:hover  {
+.checkoutBtn:hover, .loginFormContainer > div > input:hover, .errorPage > a:hover {
   border: solid rgb(255, 145, 0);
   background-color: rgb(255, 145, 0);
   cursor: pointer;
@@ -735,4 +735,25 @@ footer {
 .thankYouPopUp > img {
   width: 100%;
   height: 100%;
+}
+
+.errorPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.errorPage > a {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: solid rgb(250,132,30);
+  background-color: rgb(250,132,30);
+  color: white;
+}
+
+.dog {
+  width: 500px;
 }
