@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { CartNum } from '../context/NumInCart'
 import Cart from './Cart'
 import ProductCard from './ProductCard'
+import SideBar from './SideBar'
 
 export default function Home() {
   const [ products, setProducts ] = useState([])
@@ -16,14 +17,18 @@ export default function Home() {
 
 
   return (
-    <div className='selection'>
-        {products.map((product) => 
-            <ProductCard key={product.id} product={product} />
-        )}
-
-        <div className="addedToCart">
-            &#10003; Added to cart
+    <main className='indexMain'>
+        <SideBar />
+        <hr className='catagoryHr' />
+        <div className='selection'>
+            {products.map((product) => 
+                <ProductCard key={product.id} product={product} />
+            )}
+    
+            <div className="addedToCart">
+                &#10003; Added to cart
+            </div>
         </div>
-    </div>
+    </main>
   )
 }
