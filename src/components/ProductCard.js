@@ -12,7 +12,7 @@ export default function ProductCard({product}) {
         addedToCartNotification.classList.remove('active');
     }, 1000);
   }
-  
+
   return (
     <div className='productCard'>
         <div className="productImageContainer">
