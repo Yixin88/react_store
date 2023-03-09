@@ -16,7 +16,7 @@ export default function ProductCard({product}) {
   return (
     <div className='productCard'>
         <div className="productImageContainer">
-            <img className="thumbnail" src={product.images[0]} />
+            <img className="thumbnail" src={product.images[0]} alt='product thumbnail'/>
         </div>
         <h2 className="title" >{product.title}</h2>
         <h3>{product.category}</h3>
