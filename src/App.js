@@ -12,6 +12,7 @@ import GiftPage from "./pages/GiftPage"
 import DimeVideoPage from "./pages/DimeVideoPage"
 import VouchersPage from "./pages/VouchersPage";
 import BuyAgainPage from "./pages/BuyAgainPage";
+import CategoryPage from "./pages/CategoryPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="DimeVideo" element={<DimeVideoPage />} />
       <Route path="vouchers" element={<VouchersPage />} />
       <Route path="BuyAgain" element={<BuyAgainPage />} />
+      <Route path=":categoryList" element={<CategoryPage />} />
 
 
 
