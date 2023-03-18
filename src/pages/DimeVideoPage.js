@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function DimeVideoPage() {
   return (
-    <div>DimeVideoPage</div>
+    <main className='subpageMain'>DimeVideoPage</main>
   )
 }

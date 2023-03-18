@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function GiftPage() {
   return (
-    <div>GiftPage</div>
+    <main className='subpageMain'>GiftPage</main>
   )
 }

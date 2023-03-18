@@ -26,7 +26,6 @@ header {
 footer {
   text-align: center;
   background-color: rgb(35,47,62);
-
 }
 
 .loginPageBody {
@@ -756,4 +755,8 @@ footer {
 
 .dog {
   width: 500px;
+}
+
+.subpageMain {
+  flex: 1;
 }

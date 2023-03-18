@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function BuyAgainPage() {
   return (
-    <div>BuyAgainPage</div>
+    <main className='subpageMain'>BuyAgainPage</main>
   )
 }
