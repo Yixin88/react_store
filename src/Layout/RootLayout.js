@@ -1,12 +1,21 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { CartNum } from '../context/NumInCart'
 import { SearchQuery } from '../context/QueryContext'
 
 export default function RootLayout() {
-  const {cart, addToCart} = useContext(CartNum)
-  const {query, setQuery} = useContext(SearchQuery)
+  const {cart} = useContext(CartNum)
+  const {setQuery} = useContext(SearchQuery)
+
+  const [searchInputValue, setSearchInputVaue] = useState('');
+
+  function enterPressed(e) {
+    let code = e.keyCode || e.which;
+    if(code === 13) {
+        setQuery(searchInputValue)
+    } 
+  }
 
   return (
     <>
@@ -20,8 +29,8 @@ export default function RootLayout() {
                         <option value="men">Men</option>
                         <option value="woman">Woman</option>
                     </select>
-                    <input type="text" name="search" id="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search" />
-                    <button className="searchIconContainer">
+                    <input onKeyPress={enterPressed} type="text" name="search" id="search" value={searchInputValue} onChange={e => setSearchInputVaue(e.target.value)} placeholder="Search" />
+                    <button onClick={() => setQuery(searchInputValue)} className="searchIconContainer">
                         <img className="searchIcon" src={require("../assets/search.png")} alt="search button" />
                     </button>
                 </div>
