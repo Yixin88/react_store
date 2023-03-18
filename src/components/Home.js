@@ -1,15 +1,12 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { CartNum } from '../context/NumInCart'
-import QueryContext, { SearchQuery } from '../context/QueryContext'
-import Cart from './Cart'
+import { SearchQuery } from '../context/QueryContext'
 import ProductCard from './ProductCard'
-import SideBar from './SideBar'
 
 export default function Home() {
   const [ products, setProducts ] = useState([])
-  const {query, setQuery} = useContext(SearchQuery);
+  const {query} = useContext(SearchQuery);
 
   useEffect(() => { 
     fetch('https://dummyjson.com/products?limit=100')
@@ -34,15 +31,11 @@ export default function Home() {
   }
 
   return (
-    <main className='indexMain'>
-        <SideBar />
-        <hr className='catagoryHr' />
-        <div className='selection'>
-            {filteredQuery()}
-            <div className="addedToCart">
-                &#10003; Added to cart
-            </div>
+    <section className='selection'>
+        {filteredQuery()}
+        <div className="addedToCart">
+            &#10003; Added to cart
         </div>
-    </main>
+    </section>
   )
 }

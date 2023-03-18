@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
+import SideBar from '../components/SideBar'
 import { CartNum } from '../context/NumInCart'
 import { SearchQuery } from '../context/QueryContext'
 
@@ -24,7 +25,7 @@ export default function RootLayout() {
     <>
         <header className="mainHeader">
             <nav className="mainNav">
-                <NavLink to="/"><img src={require("../assets/store_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
+                <NavLink onClick={() => setQuery('')} to="/"><img src={require("../assets/store_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
                 <div className="searchContainer">
                     <select className="dropdownMenu">
                         <option value="all">All</option>
@@ -53,7 +54,13 @@ export default function RootLayout() {
                 <NavLink to='BuyAgain'>Buy Again</NavLink>
             </nav>
         </header>
-        <Outlet />
+        
+        <main className='indexMain'>
+            <SideBar />
+            <hr className='catagoryHr' />
+            <Outlet />
+        </main>
+        
         <Footer />
     </>
   )

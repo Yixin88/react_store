@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
-import SideBar from '../components/SideBar'
 
 export default function Home() {
   const [ products, setProducts ] = useState([])
@@ -20,15 +19,11 @@ export default function Home() {
   const filteredCategoryMapped = filteredCategory.map(product => <ProductCard key={product.id} product={product} />)
 
   return (
-    <main className='indexMain'>
-        <SideBar />
-        <hr className='catagoryHr' />
-        <div className='selection'>
-            {filteredCategory.length === 0 ? navigate('*') : filteredCategoryMapped}
-            <div className="addedToCart">
-                &#10003; Added to cart
-            </div>
+    <section className='selection'>
+        {filteredCategory.length === 0 ? navigate('*') : filteredCategoryMapped}
+        <div className="addedToCart">
+            &#10003; Added to cart
         </div>
-    </main>
+    </section>
   )
 }
