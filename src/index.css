@@ -760,3 +760,8 @@ footer {
 .subpageMain {
   flex: 1;
 }
+
+.noResults {
+  text-align: center;
+  align-self: center;
+}

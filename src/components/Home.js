@@ -24,9 +24,14 @@ export default function Home() {
       )
     } else {
       const filteredArray = products.filter(product => product.title.toLowerCase().includes(query.toLowerCase()) || product.category.toLowerCase().includes(query.toLowerCase()))
-      return (
-        filteredArray.map(item => <ProductCard key={item.id} product={item} />)
-      )
+      console.log(filteredArray)
+      return (filteredArray.length === 0 ? 
+                <div className='noResults'>
+                  <h2>No Results</h2>
+                  <h3>Please try again</h3>
+                </div>
+                : 
+                filteredArray.map(item => <ProductCard key={item.id} product={item} />))
     }
   }
 
