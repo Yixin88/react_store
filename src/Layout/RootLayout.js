@@ -1,11 +1,13 @@
-import React from 'react'
 import { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { CartNum } from '../context/NumInCart'
+import { SearchQuery } from '../context/QueryContext'
 
 export default function RootLayout() {
   const {cart, addToCart} = useContext(CartNum)
+  const {query, setQuery} = useContext(SearchQuery)
+
   return (
     <>
         <header className="mainHeader">
@@ -18,7 +20,7 @@ export default function RootLayout() {
                         <option value="men">Men</option>
                         <option value="woman">Woman</option>
                     </select>
-                    <input type="text" name="search" id="search" placeholder="Search" />
+                    <input type="text" name="search" id="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search" />
                     <button className="searchIconContainer">
                         <img className="searchIcon" src={require("../assets/search.png")} alt="search button" />
                     </button>

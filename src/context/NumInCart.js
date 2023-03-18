@@ -9,7 +9,7 @@ export default function NumInCart({children}) {
     const [ cart, setCart ] = useState(0);
 
     function addToCart() {
-        setCart(cart + 1)
+        setCart(prevCart => prevCart + 1)
     }
 
     return (
