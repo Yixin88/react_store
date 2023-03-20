@@ -54,9 +54,7 @@ export default function RootLayout() {
             </nav>
         </header>
         
-        <main className='indexMain'>
-            <Outlet />
-        </main>
+        <Outlet />
         
         <Footer />
     </>
