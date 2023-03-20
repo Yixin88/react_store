@@ -1,30 +1,30 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+import React from 'react'
 import { useContext } from 'react'
+import { useParams } from 'react-router-dom'
+import { ProductsContext } from '../context/ProductsContext'
 import { SearchQuery } from '../context/QueryContext'
 import ProductCard from './ProductCard'
 
 export default function Home() {
-  const [ products, setProducts ] = useState([])
-  const {query} = useContext(SearchQuery);
+  const { query } = useContext(SearchQuery);
+  const { products } = useContext(ProductsContext);
+  const { categoryList } = useParams();
 
-  useEffect(() => { 
-    fetch('https://dummyjson.com/products?limit=100')
-      .then(res=>res.json())
-      .then(json=> setProducts(json.products))}
-      ,[])
-
+  let filteredCategory = products.filter(item => item.category === categoryList);
 
   function filteredQuery() {
-    if (query === '') {
+    if (query === '' && filteredCategory.length < 1) {
       return (
         products.map((product) => 
                 <ProductCard key={product.id} product={product} />
             )
       )
+    } else if (filteredCategory.length > 0) {
+      return (
+        filteredCategory.map(product => <ProductCard key={product.id} product={product} />)
+        )
     } else {
       const filteredArray = products.filter(product => product.title.toLowerCase().includes(query.toLowerCase()) || product.category.toLowerCase().includes(query.toLowerCase()))
-      console.log(filteredArray)
       return (filteredArray.length === 0 ? 
                 <div className='noResults'>
                   <h2>No Results</h2>

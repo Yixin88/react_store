@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
-import SideBar from '../components/SideBar'
 import { CartNum } from '../context/NumInCart'
 import { SearchQuery } from '../context/QueryContext'
 
@@ -56,8 +55,6 @@ export default function RootLayout() {
         </header>
         
         <main className='indexMain'>
-            <SideBar />
-            <hr className='catagoryHr' />
             <Outlet />
         </main>
         

@@ -1,6 +1,5 @@
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import Cart from "./components/Cart";
-import Home from "./components/Home";
 
 // Layouts
 import RootLayout from "./Layout/RootLayout";
@@ -12,20 +11,19 @@ import GiftPage from "./pages/GiftPage"
 import DimeVideoPage from "./pages/DimeVideoPage"
 import VouchersPage from "./pages/VouchersPage";
 import BuyAgainPage from "./pages/BuyAgainPage";
-import CategoryPage from "./pages/CategoryPage";
+import StorePageLayout from "./Layout/StorePageLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route to='/' element={<RootLayout />}>
-      <Route index element={<Home />} />
+    <Route path='/:categoryList?' element={<RootLayout />}>
+      <Route index element={<StorePageLayout />} />
+
       <Route path="cart" element={<Cart />} />
       <Route path="deals" element={<DealsPage />} />
       <Route path="gift" element={<GiftPage />} />
       <Route path="DimeVideo" element={<DimeVideoPage />} />
       <Route path="vouchers" element={<VouchersPage />} />
       <Route path="BuyAgain" element={<BuyAgainPage />} />
-      <Route path=":categoryList" element={<CategoryPage />} />
-
 
 
 
