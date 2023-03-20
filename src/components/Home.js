@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { ProductsContext } from '../context/ProductsContext'
 import { SearchQuery } from '../context/QueryContext'
 import ProductCard from './ProductCard'
@@ -9,15 +9,22 @@ export default function Home() {
   const { query } = useContext(SearchQuery);
   const { products } = useContext(ProductsContext);
   const { categoryList } = useParams();
+  const navigate = useNavigate();
 
   let filteredCategory = products.filter(item => item.category === categoryList);
+  const productCategoryList = [...new Set(products.map(item => item.category))]
 
   function filteredQuery() {
+    console.log(categoryList)
     if (query === '' && filteredCategory.length < 1) {
-      return (
-        products.map((product) => 
-                <ProductCard key={product.id} product={product} />
-            )
+      return(
+        productCategoryList.includes(categoryList) || categoryList === undefined ?
+       
+          products.map((product) => 
+                  <ProductCard key={product.id} product={product} />
+              )
+         :
+        navigate('/error/*')
       )
     } else if (filteredCategory.length > 0) {
       return (
