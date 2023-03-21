@@ -39,10 +39,10 @@ export default function RootLayout() {
                 </div>
                 <div className="headerRight">
                     <span className="user">Hello User</span>
-                    <div className="cartDetail">
+                    <NavLink to={"cart"} className="cartDetail">
                         <img className="shoppingCartIcon" src={require("../assets/shopping-cart.png")} alt="shopping cart icon" />
                         <span className="cartNumber">{cart}</span>
-                    </div>
+                    </NavLink>
                 </div>
             </nav>
             <nav className="subHeader">

@@ -1,5 +1,5 @@
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
-import Cart from "./components/Cart";
+import Cart from "./pages/Cart";
 
 // Layouts
 import RootLayout from "./Layout/RootLayout";

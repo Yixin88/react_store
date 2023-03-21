@@ -210,10 +210,12 @@ footer {
 .cartDetail {
   gap: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .cartNumber {
   width: 25px;
+  color: white;
 }
 
 .catagoryNav {
