@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '../components/Home'
+import Home from '../components/ProductMain'
 import SideBar from '../components/SideBar'
 
 export default function StorePageLayout() {
