@@ -12,11 +12,13 @@ import DimeVideoPage from "./pages/DimeVideoPage"
 import VouchersPage from "./pages/VouchersPage";
 import BuyAgainPage from "./pages/BuyAgainPage";
 import StorePageLayout from "./Layout/StorePageLayout";
+import ProductPage from "./pages/ProductPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/:categoryList?' element={<RootLayout />}>
       <Route index element={<StorePageLayout />} />
+      <Route path="product:id" element={<ProductPage />} />
 
       <Route path="cart" element={<Cart />} />
       <Route path="deals" element={<DealsPage />} />
