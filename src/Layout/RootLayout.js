@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
-import { CartNum } from '../context/NumInCart'
+import { CartNum } from '../context/NumInCartContext'
 import { SearchQuery } from '../context/QueryContext'
 
 export default function RootLayout() {

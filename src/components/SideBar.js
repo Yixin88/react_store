@@ -1,20 +1,10 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
+import { CategoryList } from '../context/CategoryContext'
 
 export default function SideBar() {
-    const [ category, setCategory ] = useState([])
-
-    useEffect(()=> {
-        fetch("https://dummyjson.com/products/categories")
-        .then(response => response.json())
-        .then(data => {
-            const toUpper = data.map((element) => element.toUpperCase())
-            setCategory(toUpper)
-        })
-    }, [])
+    const { category } = useContext(CategoryList);
 
     return (
     <nav className='catagoryNav'>

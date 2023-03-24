@@ -15,7 +15,6 @@ export default function Home() {
   const productCategoryList = [...new Set(products.map(item => item.category))]
 
   function filteredQuery() {
-    console.log(categoryList)
     if (query === '' && filteredCategory.length < 1) {
       return(
         productCategoryList.includes(categoryList) || categoryList === undefined ?

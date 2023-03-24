@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import NumInCart, { CartNum } from '../context/NumInCart'
+import { CartNum } from '../context/NumInCartContext'
 
 export default function ProductCard({product}) {
   const addedToCartNotification = document.querySelector(".addedToCart");
