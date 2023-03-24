@@ -766,3 +766,8 @@ footer {
   text-align: center;
   align-self: center;
 }
+
+.title a {
+  text-decoration: none;
+  color: black;
+}
