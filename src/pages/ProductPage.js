@@ -5,14 +5,20 @@ import { ProductsContext } from '../context/ProductsContext';
 export default function ProductPage() {
   const { id } = useParams();
   const { products } = useContext(ProductsContext);
-//   const products = [{id: 4, title: 'Huawei P30'}, {id: 5, title: 'iphone P30'}]
-  const productDetail = products.filter(item => item.id === parseInt(id))[0];
-//   const productDetail = products.reduce((object, item) => item.id === parseInt(id)); 
-  console.log(productDetail)
+
+  function productDetail(productsList) {
+    const details = productsList.filter(item => item.id === parseInt(id))[0];
+    return (
+        <p>
+            <h1>{details.title}</h1>
+            <p>{details.description}</p>
+        </p>
+    )
+  }
 
   return (
     <main className='subpageMain'>
-        {/* <h1>{productDetail.title}</h1> */}
+        {productDetail(products)}
     </main>
   )
 }
