@@ -10,14 +10,14 @@ import CategoryContext from './context/CategoryContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CategoryContext>
-      <ProductsContextProvider>
+    <ProductsContextProvider>
+      <CategoryContext>
         <NumInCart>
           <QueryContext>
             <App />
           </QueryContext>
         </NumInCart>
-      </ProductsContextProvider>
-    </CategoryContext>
+      </CategoryContext>
+    </ProductsContextProvider>
   </React.StrictMode>
 );
