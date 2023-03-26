@@ -8,7 +8,7 @@ import ProductCard from './ProductCard'
 
 export default function Home() {
   const { query } = useContext(SearchQuery);
-  const { products } = useContext(ProductsContext);
+  const { products, loading } = useContext(ProductsContext);
   const { categoryList } = useParams();
   const navigate = useNavigate();
 
@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <section className='selection'>
-        {filteredQuery()}
+        {loading ? <h1>Loading...</h1> : filteredQuery()}
         <AddedToCartPopUp />
     </section>
   )
