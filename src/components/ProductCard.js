@@ -4,15 +4,10 @@ import { NavLink } from 'react-router-dom';
 import { CartNum } from '../context/NumInCartContext'
 
 export default function ProductCard({product}) {
-  const addedToCartNotification = document.querySelector(".addedToCart");
 
-  const { addToCart } = useContext(CartNum)
-  function popUp() {
-    addedToCartNotification.classList.add('active');
-    setTimeout(() => {
-        addedToCartNotification.classList.remove('active');
-    }, 1000);
-  }
+
+  const { addToCart, popUp } = useContext(CartNum)
+
 
   return (
     <div className='productCard'>
