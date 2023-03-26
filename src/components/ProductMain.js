@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ProductsContext } from '../context/ProductsContext'
 import { SearchQuery } from '../context/QueryContext'
+import AddedToCartPopUp from './AddedToCartPopUp'
 import ProductCard from './ProductCard'
 
 export default function Home() {
@@ -44,9 +45,7 @@ export default function Home() {
   return (
     <section className='selection'>
         {filteredQuery()}
-        <div className="addedToCart">
-            &#10003; Added to cart
-        </div>
+        <AddedToCartPopUp />
     </section>
   )
 }

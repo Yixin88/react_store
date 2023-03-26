@@ -308,7 +308,7 @@ footer {
   font-size: 25px;
 }
 
-.productCard > button {
+.productCard > button, .popUpAddToCartBtn {
   grid-area: addToCart;
   padding: 10px;
   border: solid rgb(250,132,30);
@@ -320,12 +320,13 @@ footer {
   align-self: center;
 }
 
-.productCard > button:hover, .popUpAddToCartBtn:hover, .popUpLeft > button:hover, .keepBrowsingBtn:hover {
+.productCard > button:hover, .popUpAddToCartBtn:hover, .productPageLeft > button:hover, .keepBrowsingBtn:hover {
   border: solid rgb(255, 145, 0);
   background-color: rgb(255, 145, 0);
+  cursor: pointer;
 }
 
-.productCard > button:active,.popUpAddToCartBtn:active, .popUpLeft > button:hover:active, .keepBrowsingBtn:active {
+.productCard > button:active,.popUpAddToCartBtn:active, .productPageLeft > button:hover:active, .keepBrowsingBtn:active {
   border: solid rgb(183, 123, 45);
   background-color: rgb(183, 123, 45);
 }
@@ -411,8 +412,7 @@ footer {
   font-weight: bold;
 }
 
-.popUpLeft {
-  grid-area: productImg;
+.productPageLeft {
   justify-self: center;
   align-self: center;
   margin: 30px;
@@ -422,12 +422,10 @@ footer {
   gap: 5px;
   position: relative;
   width: 90%;
-  height: 60vh;
-  max-height: 500px;
+  height: 30rem;
 }
 
-.popUpLeftImg {
-  flex: 1;
+.productPageLeftImg {
   display: flex;
   max-width: 100%;
   max-height: 100%;
@@ -439,7 +437,7 @@ footer {
   object-fit: contain;
 }
 
-.popUpLeft > button {
+.productPageLeft > button {
   background-color: rgb(250,132,30);
   padding: 15px;
   border: solid rgb(250,132,30);
@@ -452,12 +450,11 @@ footer {
   margin-top: 0px;
 }
 
-.popUpRight {
-  grid-area: productDetails;
+.productPageRight {
   font-size: 1.2rem;
   padding: 30px;
 }
-.popUpRight > button {
+.productPageRight > button {
   max-width: 500px;
   width: 50%;
   padding: 10px;
@@ -770,4 +767,18 @@ footer {
 .title a {
   text-decoration: none;
   color: black;
+}
+
+.productPageLoading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.productPageContent {
+  display: flex;
+  min-height: 100%;
+  max-width: 60rem;
+  margin: 5rem auto;
 }
