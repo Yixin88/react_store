@@ -779,6 +779,6 @@ footer {
 .productPageContent {
   display: flex;
   min-height: 100%;
-  max-width: 60rem;
+  max-width: 80rem;
   margin: 5rem auto;
 }
