@@ -19,6 +19,7 @@ const router = createBrowserRouter(
     <Route path='/:categoryList?' element={<RootLayout />}>
       <Route index element={<StorePageLayout />} />
       <Route path="products" element={<StorePageLayout />} />
+      <Route path="react_store" element={<StorePageLayout />} />
       <Route path="products/:id" element={<ProductPage />} />
 
       <Route path="cart" element={<Cart />} />
