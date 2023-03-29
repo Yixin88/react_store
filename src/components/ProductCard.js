@@ -6,7 +6,7 @@ import { CartNum } from '../context/NumInCartContext'
 export default function ProductCard({product}) {
 
 
-  const { addToCart, popUp } = useContext(CartNum)
+  const { addToCart, popUp, addItemToCart } = useContext(CartNum)
 
 
   return (
@@ -19,7 +19,7 @@ export default function ProductCard({product}) {
         <span hidden className="productId">{product.id}</span>
         <span className="rating">{product.rating}/5 ⭐️</span>
         <span className="price">£{product.price}</span>
-        <button className='addToCartBtn' onClick={()=> {addToCart(); popUp()}}>Add to Cart</button>
+        <button className='addToCartBtn' onClick={()=> {addToCart(); popUp(); addItemToCart(product)}}>Add to Cart</button>
     </div>
   )
 }
