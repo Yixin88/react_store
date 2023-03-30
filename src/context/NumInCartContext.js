@@ -15,8 +15,8 @@ export default function NumInCart({children}) {
     }
 
     function addItemToCart(item) {
-        if (item.hasOwnProperty('quantity')) {
-            setItemsInCart(itemsInCart.map(cartItem => {
+        if (itemsInCart.some(element => item.id === element.id)) {
+            setItemsInCart(prev => prev.map(cartItem => {
                 if (cartItem.id === item.id) {
                     cartItem.quantity += 1;
                 }
@@ -24,11 +24,10 @@ export default function NumInCart({children}) {
             }))
         } else {
             item.quantity = 1
-            setItemsInCart([...itemsInCart, item])
-            console.log('2nd run')
-        }
+            setItemsInCart(prev => [...prev, item])
+        } 
+        
     }
-    console.log(itemsInCart)
     
     function popUp() {
         const addedToCartNotification = document.querySelector(".addedToCart");

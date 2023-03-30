@@ -3,7 +3,7 @@ import { CartNum } from '../context/NumInCartContext';
 
 export default function ProductDetails({product, imageArray}) {
     const addedToCartNotification = document.querySelector(".addedToCart");
-    const { addToCart } = useContext(CartNum);
+    const { addToCart, addItemToCart } = useContext(CartNum);
     const [ imageIndex, setImageIndex ] = useState(0);
 
     function nextImage(imageIndex) {
@@ -45,7 +45,7 @@ export default function ProductDetails({product, imageArray}) {
                     <p className="productStock">Stocks Remaining: {product.stock}</p>
                     <span className="productRating">Rating: {product.rating}/5⭐️</span>
                     <p className="productPrice">£{product.price}</p>
-                    <button className="popUpAddToCartBtn" onClick={()=> {addToCart(); popUp()}}>Add To Cart</button>
+                    <button className="popUpAddToCartBtn" onClick={()=> {addToCart(); popUp(); addItemToCart(product)}}>Add To Cart</button>
                 </div>
             </div> 
   )
