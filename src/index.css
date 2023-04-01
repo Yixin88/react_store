@@ -191,7 +191,7 @@ footer {
   text-decoration: none;
 }
 
-.subHeader > a:hover {
+.subHeader > a:hover, .subHeader .active {
   font-weight: bold;
   color: rgb(250,132,30);
 }
