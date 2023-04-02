@@ -211,6 +211,11 @@ footer {
   gap: 10px;
   cursor: pointer;
   text-decoration: none;
+  transition: all ease-in-out 200ms;
+}
+
+.cartDetail:hover {
+  transform: scale(1.2);
 }
 
 .cartNumber {
