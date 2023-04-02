@@ -28,6 +28,17 @@ export default function NumInCart({children}) {
         } 
         
     }
+
+    function minusFromCart(item) {
+        setItemsInCart(prev => prev.map(cartItem => {
+            if (cartItem.id === item.id) {
+                if (cartItem.quantity > 1){
+                    cartItem.quantity -= 1;
+                }
+            }
+            return cartItem
+        }))
+    }
     
     function popUp() {
         const addedToCartNotification = document.querySelector(".addedToCart");
@@ -38,8 +49,10 @@ export default function NumInCart({children}) {
         }, 1000);
       }
 
+    console.log(itemsInCart)
+
     return (
-        <CartNum.Provider value={{cart, addToCart, popUp, itemsInCart, addItemToCart}}>
+        <CartNum.Provider value={{cart, addToCart, popUp, itemsInCart, addItemToCart, minusFromCart}}>
             {children}
         </CartNum.Provider>
     )
