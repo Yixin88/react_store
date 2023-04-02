@@ -17,6 +17,7 @@ export default function ProductPage() {
         setProduct(json)
         setLoading(false)
         setImageArray(json.images)
+        window.scrollTo(0,0)
       }).catch(error => console.log(error))}, [])
 
   return (

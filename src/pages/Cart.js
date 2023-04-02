@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { CartNum } from '../context/NumInCartContext'
+import ScrollToTop from '../util/ScrollToTop';
 
 export default function Cart() {
   const { cart, itemsInCart } = useContext(CartNum);
   return (
     <main className='subpageMain'>
+      <ScrollToTop />
       <h1>Your Cart</h1>
       <span/>
       <div className='cartSection'>
