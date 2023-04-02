@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { createContext } from 'react'
 
 export const CartNum = createContext();
@@ -6,13 +6,16 @@ export const CartNum = createContext();
 
 
 export default function NumInCart({children}) {
-    const [ cart, setCart ] = useState(0);
     const [ itemsInCart, setItemsInCart ] = useState([]);
-    
-    function addToCart() {
-        setCart(prevCart => prevCart + 1)
-        
-    }
+    const [ cart, setCart ] = useState(0);
+
+
+    useEffect(() => {
+        setCart(itemsInCart.reduce((total, item) => {
+            return total + item.quantity
+        },0))
+    }, [itemsInCart])
+
 
     function addItemToCart(item) {
         if (itemsInCart.some(element => item.id === element.id)) {
@@ -55,8 +58,9 @@ export default function NumInCart({children}) {
 
     console.log(itemsInCart)
 
+
     return (
-        <CartNum.Provider value={{cart, addToCart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart}}>
+        <CartNum.Provider value={{cart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart}}>
             {children}
         </CartNum.Provider>
     )
