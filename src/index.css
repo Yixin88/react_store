@@ -546,6 +546,12 @@ footer {
 
 .emptyCartMsg {
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
 }
 
 .cartTitle, .priceTotal {
@@ -557,6 +563,8 @@ footer {
   width: 80%;
   max-width: 50rem;
   padding: 20px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
   font-size: 1.8rem;
 }
 
@@ -612,7 +620,7 @@ footer {
 }
 
 .quantityBtn:hover, .deleteBtn:hover {
-  filter: contrast(80%);
+  filter: saturate(2);
 }
 
 .quantityBtn:active, .deleteBtn:active {
@@ -645,7 +653,7 @@ footer {
 }
 
 .checkoutBtn {
-  width: 100%;
+  width: clamp(200px, 20%, 500px);
   border-radius: 5px;
   border: solid rgb(250,132,30);
   background-color: rgb(250,132,30);

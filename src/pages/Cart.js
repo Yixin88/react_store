@@ -23,6 +23,7 @@ export default function Cart() {
         </div>
   
         <h3 className='priceTotal'>Total: £{totalPrice}</h3>
+        <button className='checkoutBtn active'>Checkout</button>
       </>}
     </main>
   )
