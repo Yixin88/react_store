@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom';
 import { CartNum } from '../context/NumInCartContext'
 import ScrollToTop from '../util/ScrollToTop';
 
@@ -7,8 +8,14 @@ export default function Cart() {
   return (
     <main className='subpageMain'>
       <ScrollToTop />
-      <h1>Your Cart</h1>
-      <span/>
+      {itemsInCart.length === 0 ? 
+      <div className='emptyCartMsg'>
+        <h1>Your Cart Is Empty</h1>
+        <NavLink to='/'>Start Browsing</NavLink>
+      </div>
+      :
+      <h1 className='cartTitle'>Your Cart</h1>}
+
       <div className='cartSection'>
         {itemsInCart.map(item => {
           return (

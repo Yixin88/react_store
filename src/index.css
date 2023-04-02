@@ -534,7 +534,6 @@ footer {
   max-width: 60rem;
   width: 85%;
   min-height: 10rem;
-  /* height: 10rem; */
 }
 
 .cartSection {
@@ -543,6 +542,14 @@ footer {
   align-items: center;
   gap: 10px;
   margin-bottom: 50px;
+}
+
+.emptyCartMsg {
+  text-align: center;
+}
+
+.cartTitle {
+  text-align: center;
 }
 
 .cartHeader > button {
@@ -562,7 +569,6 @@ footer {
   justify-content: center;
   width: 95%;
   height: 95%;
-  /* border: solid red; */
   justify-self: center;
 }
 
@@ -640,7 +646,7 @@ footer {
   border: solid rgb(118, 118, 118);
 }
 
-.checkoutBtn:hover, .loginFormContainer > div > input:hover, .errorPage > a:hover {
+.checkoutBtn:hover, .loginFormContainer > div > input:hover, .errorPage > a:hover, .emptyCartMsg > a:hover {
   border: solid rgb(255, 145, 0);
   background-color: rgb(255, 145, 0);
   cursor: pointer;
@@ -762,7 +768,7 @@ footer {
   flex-direction: column;
 }
 
-.errorPage > a {
+.errorPage > a, .emptyCartMsg > a {
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
