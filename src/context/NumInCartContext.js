@@ -8,14 +8,17 @@ export const CartNum = createContext();
 export default function NumInCart({children}) {
     const [ itemsInCart, setItemsInCart ] = useState([]);
     const [ cart, setCart ] = useState(0);
-
+    const [ totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
         setCart(itemsInCart.reduce((total, item) => {
             return total + item.quantity
         },0))
-    }, [itemsInCart])
 
+        setTotalPrice(itemsInCart.reduce((total, item) => {
+            return total + item.price*item.quantity
+        }, 0))
+    }, [itemsInCart])
 
     function addItemToCart(item) {
         if (itemsInCart.some(element => item.id === element.id)) {
@@ -56,11 +59,9 @@ export default function NumInCart({children}) {
         }, 1000);
       }
 
-    console.log(itemsInCart)
-
 
     return (
-        <CartNum.Provider value={{cart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart}}>
+        <CartNum.Provider value={{cart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart, totalPrice}}>
             {children}
         </CartNum.Provider>
     )
