@@ -608,6 +608,10 @@ footer {
 
 .cartCartProduct {
   margin: 0;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
 }
 
 .cartPrice {

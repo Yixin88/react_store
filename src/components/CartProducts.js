@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom';
 import { CartNum } from '../context/NumInCartContext';
 
 export default function CartProducts({ item }) {
@@ -11,7 +12,7 @@ export default function CartProducts({ item }) {
                 <img src={item.images[0]} alt="product" />
             </div>
             <div className='cartCartDetail'>
-                <h3 className='cartCartProduct'>{item.title}</h3>
+                <NavLink className='cartCartProduct' to={`/products/${item.id}`}>{item.title}</NavLink>
                 <span className='cartPrice'>£{item.price}/Unit</span>
             </div>
             <div className="quantityContainer">
