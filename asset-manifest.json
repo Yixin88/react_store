@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/react_store/static/css/main.dcadcd33.css",
-    "main.js": "/react_store/static/js/main.9df8ed2a.js",
+    "main.css": "/react_store/static/css/main.d1c0c81d.css",
+    "main.js": "/react_store/static/js/main.53c7027c.js",
     "static/media/bulldog.png": "/react_store/static/media/bulldog.43c3488e8a000ea97940.png",
     "static/media/Poppins-Light.ttf": "/react_store/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/store_logo.png": "/react_store/static/media/store_logo.ecb4cc0882b00e069925.png",
+    "static/media/trash-bin.png": "/react_store/static/media/trash-bin.3064958e440239dc1a1d.png",
     "static/media/shopping-cart.png": "/react_store/static/media/shopping-cart.96c73cb49987ccdf1154.png",
     "index.html": "/react_store/index.html",
-    "main.dcadcd33.css.map": "/react_store/static/css/main.dcadcd33.css.map",
-    "main.9df8ed2a.js.map": "/react_store/static/js/main.9df8ed2a.js.map"
+    "main.d1c0c81d.css.map": "/react_store/static/css/main.d1c0c81d.css.map",
+    "main.53c7027c.js.map": "/react_store/static/js/main.53c7027c.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcadcd33.css",
-    "static/js/main.9df8ed2a.js"
+    "static/css/main.d1c0c81d.css",
+    "static/js/main.53c7027c.js"
   ]
 }
