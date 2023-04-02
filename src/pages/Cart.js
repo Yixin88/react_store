@@ -7,7 +7,7 @@ import ScrollToTop from '../util/ScrollToTop';
 export default function Cart() {
   const {totalPrice, itemsInCart } = useContext(CartNum);
   return (
-    <main className='subpageMain'>
+    <main className='subpageMain cartPage'>
       <ScrollToTop />
       {itemsInCart.length === 0 ? 
       <div className='emptyCartMsg'>
@@ -15,13 +15,15 @@ export default function Cart() {
         <NavLink to='/'>Start Browsing</NavLink>
       </div>
       :
-      <h1 className='cartTitle'>Your Cart</h1>}
-
-      <div className='cartSection'>
-        {itemsInCart.map(item => <CartProducts key={item.id} item={item} />)}
-      </div>
-
-      <h3>Total: {totalPrice}</h3>
+      <>
+        <h1 className='cartTitle'>Your Cart</h1>
+  
+        <div className='cartSection'>
+          {itemsInCart.map(item => <CartProducts key={item.id} item={item} />)}
+        </div>
+  
+        <h3 className='priceTotal'>Total: £{totalPrice}</h3>
+      </>}
     </main>
   )
 }

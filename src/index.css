@@ -541,15 +541,29 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .emptyCartMsg {
   text-align: center;
 }
 
-.cartTitle {
+.cartTitle, .priceTotal {
   text-align: center;
+}
+
+.priceTotal {
+  border-top: solid 2px black;
+  width: 80%;
+  max-width: 50rem;
+  padding: 20px;
+  font-size: 1.8rem;
+}
+
+.cartPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cartHeader > button {
