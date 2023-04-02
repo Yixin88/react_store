@@ -39,6 +39,10 @@ export default function NumInCart({children}) {
             return cartItem
         }))
     }
+
+    function removeFromCart(item) {
+        setItemsInCart(prev => prev.filter(cartItem => cartItem.id !== item.id))
+    }
     
     function popUp() {
         const addedToCartNotification = document.querySelector(".addedToCart");
@@ -52,7 +56,7 @@ export default function NumInCart({children}) {
     console.log(itemsInCart)
 
     return (
-        <CartNum.Provider value={{cart, addToCart, popUp, itemsInCart, addItemToCart, minusFromCart}}>
+        <CartNum.Provider value={{cart, addToCart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart}}>
             {children}
         </CartNum.Provider>
     )
