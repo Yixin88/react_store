@@ -834,7 +834,8 @@ footer {
 }
 
 .productPageContent {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   min-height: 100%;
   max-width: 80rem;
   margin: 5rem auto;
