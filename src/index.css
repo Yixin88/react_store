@@ -683,6 +683,10 @@ footer {
   cursor: pointer;
 }
 
+.checkoutBtn:hover {
+  transform: scale(1.1);
+}
+
 .checkoutBtn:active, .loginFormContainer > div > input:active  {
   border: solid rgb(183, 123, 45);
   background-color: rgb(183, 123, 45);
