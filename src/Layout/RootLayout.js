@@ -17,6 +17,7 @@ export default function RootLayout() {
     if(code === 13) {
         setQuery(searchInputValue)
         navigate("/")
+        document.getElementById('search').blur()
     } 
   }
 
