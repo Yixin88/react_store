@@ -285,8 +285,9 @@ footer {
 }
 
 .productCard:hover {
-  right: 3px;
-  bottom: 3px;
+  transform: translate(-3px, -3px);
+  /* right: 3px; */
+  /* bottom: 3px; */
   box-shadow: 10px 10px 20px rgba(33,33,33,.2);
 }
 
@@ -472,23 +473,6 @@ footer {
   cursor: pointer;
 }
 
-#overlay {
-  position: fixed;
-  transition: 200ms ease-in-out;
-  opacity: 0;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 6;
-  pointer-events: none;
-}
-
-#overlay.active {
-  pointer-events: all;
-  opacity: 1;
-}
 
 .cartContainer {
   position: fixed;
