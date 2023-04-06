@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom';
 import { CartNum } from '../context/NumInCartContext'
 
 export default function CheckoutPage() {
   const { cart, totalPrice } = useContext(CartNum);
 
   return (
-    <main class="thankYouPopUp subpageMain" id="thankYouPopUp">
+    <main className="thankYouPopUp subpageMain">
         <div>
             <img src={require("../assets/accept.png")} alt="tick icon" width="100px" />
         </div>
@@ -13,7 +14,7 @@ export default function CheckoutPage() {
         <p>Your order has been placed!</p>
         <p>🚚 Expected to be delivered within 3-5 business days 🚚</p>
         <p>Your order of {cart} {cart > 1 ? 'items' : 'item'} with a total of £{totalPrice} </p>
-        <button class="keepBrowsingBtn">Continue Browsing</button>
+        <NavLink to='/' className="keepBrowsingBtn">Continue Browsing</NavLink>
     </main>
   )
 }

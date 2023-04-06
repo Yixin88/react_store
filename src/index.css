@@ -286,8 +286,6 @@ footer {
 
 .productCard:hover {
   transform: translate(-3px, -3px);
-  /* right: 3px; */
-  /* bottom: 3px; */
   box-shadow: 10px 10px 20px rgba(33,33,33,.2);
 }
 
@@ -326,9 +324,23 @@ footer {
   align-self: center;
 }
 
+.thankYouPopUp > .keepBrowsingBtn {
+  border-radius: 5px;
+  border: solid rgb(250,132,30);
+  background-color: rgb(250,132,30);
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .productCard > button:hover, .popUpAddToCartBtn:hover, .productPageLeft > button:hover, .keepBrowsingBtn:hover {
   border: solid rgb(255, 145, 0);
-  background-color: rgb(255, 145, 0);
+  filter: saturate(1.2);
   cursor: pointer;
 }
 
@@ -654,6 +666,9 @@ footer {
   font-family: inherit;
   font-weight: bold;
   transition: all 200ms ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  color: white;
 }
 
 .checkoutBtn.disable {
@@ -739,25 +754,6 @@ footer {
 .thankYouPopUp p, .thankYouPopUp h3 {
   margin: 0;
   padding: 0;
-}
-
-.thankYouPopUp > button {
-  border-radius: 5px;
-  border: solid rgb(250,132,30);
-  background-color: rgb(250,132,30);
-  font-size: 1.2rem;
-  font-family: inherit;
-  font-weight: bold;
-  transition: all 200ms ease-in-out;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.thankYouPopUp.active {
-  transform: translate(-50%, -50%) scale(1);
-  top: 50%;
-  left: 50%;
 }
 
 .thankYouPopUp > img {
