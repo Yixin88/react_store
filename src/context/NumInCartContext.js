@@ -59,9 +59,14 @@ export default function NumInCart({children}) {
         }, 1000);
       }
 
+    function clearCart() {
+        setItemsInCart([]);
+        setCart(0);
+        setTotalPrice(0);
+    }
 
     return (
-        <CartNum.Provider value={{cart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart, totalPrice}}>
+        <CartNum.Provider value={{cart, popUp, itemsInCart, addItemToCart, minusFromCart, removeFromCart, totalPrice, clearCart}}>
             {children}
         </CartNum.Provider>
     )

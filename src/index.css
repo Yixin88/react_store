@@ -547,7 +547,7 @@ footer {
 
 .emptyCartMsg {
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -770,7 +770,8 @@ footer {
 
 .errorPage > a, .emptyCartMsg > a {
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
   text-decoration: none;
   border: solid rgb(250,132,30);
   background-color: rgb(250,132,30);

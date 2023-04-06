@@ -5,7 +5,7 @@ import { CartNum } from '../context/NumInCartContext'
 import ScrollToTop from '../util/ScrollToTop';
 
 export default function Cart() {
-  const {totalPrice, itemsInCart } = useContext(CartNum);
+  const {totalPrice, itemsInCart, clearCart } = useContext(CartNum);
   return (
     <main className='subpageMain cartPage'>
       <ScrollToTop />
@@ -23,7 +23,7 @@ export default function Cart() {
         </div>
   
         <h3 className='priceTotal'>Total: £{totalPrice}</h3>
-        <NavLink to='success' className='checkoutBtn active'>Buy Now</NavLink>
+        <NavLink onClick={() => clearCart()} to='success' className='checkoutBtn active'>Buy Now</NavLink>
       </>}
     </main>
   )
