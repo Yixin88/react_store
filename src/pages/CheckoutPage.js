@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { CartNum } from '../context/NumInCartContext'
 
 export default function CheckoutPage() {
-  const { cart, totalPrice, prevItemsInCart } = useContext(CartNum);
+  const { prevItemsInCart } = useContext(CartNum);
 
   return (
     <main className="thankYouPopUp subpageMain">
