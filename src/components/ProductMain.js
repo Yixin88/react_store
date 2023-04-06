@@ -12,15 +12,30 @@ export default function Home() {
   const { categoryList } = useParams();
   const navigate = useNavigate();
 
+  const numberOfItems = 24;
+  const shuffledArray = shuffleArray(products).slice(0, numberOfItems);
+
   let filteredCategory = products.filter(item => item.category === categoryList);
   const productCategoryList = [...new Set(products.map(item => item.category))]
 
+  function shuffleArray(array) {
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      console.log(currentIndex)
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+    return array;
+  }
+  
   function filteredQuery() {
     if (query === '' && filteredCategory.length < 1) {
       return(
         productCategoryList.includes(categoryList) || categoryList === undefined ?
        
-          products.map((product) => 
+          shuffledArray.map((product) => 
                   <ProductCard key={product.id} product={product} />
               )
          :
