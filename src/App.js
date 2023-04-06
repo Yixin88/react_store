@@ -13,6 +13,7 @@ import VouchersPage from "./pages/VouchersPage";
 import BuyAgainPage from "./pages/BuyAgainPage";
 import StorePageLayout from "./Layout/StorePageLayout";
 import ProductPage from "./pages/ProductPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="DimeVideo" element={<DimeVideoPage />} />
       <Route path="vouchers" element={<VouchersPage />} />
       <Route path="BuyAgain" element={<BuyAgainPage />} />
+      <Route path="success" element={<CheckoutPage />} />
 
 
 
