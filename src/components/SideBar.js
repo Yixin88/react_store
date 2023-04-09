@@ -25,9 +25,11 @@ export default function SideBar() {
                 <h3 className='mobile-category-title'>Category</h3>
                 <button className='closeNavBtn' onClick={() => nonActiveNavBar()}>x</button>
             </div>
-            {category.map((item)=> {
-                return(<NavLink onClick={() => nonActiveNavBar()} className='mobile-nav-btn' key={uuidv4()} to={'/' + item.toLowerCase()}>{item}</NavLink>)
-            })}
+            <div className='mobileNavCategoryContainer'>
+                {category.map((item)=> {
+                    return(<NavLink onClick={() => nonActiveNavBar()} className='mobile-nav-btn' key={uuidv4()} to={'/' + item.toLowerCase()}>{item}</NavLink>)
+                })}
+            </div>
         </nav>
     </>
   )
