@@ -249,6 +249,11 @@ footer {
   color: rgb(250,132,30);
 }
 
+.catagoryNav a.active {
+  color: rgb(250,132,30);
+  font-weight: bold;
+}
+
 .indexMain {
   display: grid;
   grid-template-columns: 220px 1fr 20fr;
