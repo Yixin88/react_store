@@ -935,6 +935,7 @@ footer {
   cursor: pointer;
   font-weight: bold;
   transition: transform .2s ease-in-out;
+  color: black;
 }
 
 .closeBtnContainer > button:hover {
