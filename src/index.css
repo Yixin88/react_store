@@ -846,9 +846,19 @@ footer {
   }
 }
 
+@media screen and (max-width: 870px) {
+  .user {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .small-search-bar {
     display: flex;
+  }
+
+  .user {
+    display: block;
   }
 
   .searchContainer  {
