@@ -18,6 +18,7 @@ export default function RootLayout() {
         setQuery(searchInputValue)
         navigate("/")
         document.getElementById('search').blur()
+        document.getElementById('small-search').blur()
     } 
   }
 
@@ -39,13 +40,19 @@ export default function RootLayout() {
                     </NavLink>
                 </div>
                 <div className="headerRight">
-                    <span className="user">Hello User</span>
+                    <span className="user">Welcome</span>
                     <NavLink to={"cart"} className="cartDetail">
                         <img className="shoppingCartIcon" src={require("../assets/shopping-cart.png")} alt="shopping cart icon" />
                         <span className="cartNumber">{cart}</span>
                     </NavLink>
                 </div>
             </nav>
+            <div className='small-search-bar'>
+                <input onKeyPress={enterPressed} type="text" name="search" id="small-search" value={searchInputValue} onChange={e => setSearchInputVaue(e.target.value)} placeholder="Search" />
+                <NavLink to='/' onClick={() => setQuery(searchInputValue)} className="searchIconContainer">
+                    <img className="searchIcon" src={require("../assets/search.png")} alt="search button" />
+                </NavLink>
+            </div>
             <nav className="subHeader">
                 <NavLink to='deals'>Last Minute Deals</NavLink>
                 <NavLink to='gift'>Gift Cards & Top Up</NavLink>

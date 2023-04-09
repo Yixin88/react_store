@@ -819,3 +819,41 @@ footer {
   max-width: 80rem;
   margin: 5rem auto;
 }
+
+.small-search-bar {
+  height: 2.5rem;
+  justify-content: center;
+  display: none;
+  margin: 10px 2rem;
+}
+
+#small-search {
+  flex: 1;
+  border: 1px solid white;
+  padding: 0px 10px;
+  font-family: inherit;
+  border-radius: 5px 0 0 5px;
+}
+
+/* ------------------------- Media Query ---------------------------- */
+
+@media screen and (max-width: 750px) {
+  .small-search-bar {
+    display: flex;
+  }
+
+  .searchContainer  {
+    display: none;
+  }
+
+  .subHeader {
+    overflow: scroll;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .user {
+    display: none;
+  }
+}
