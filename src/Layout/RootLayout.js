@@ -22,12 +22,19 @@ export default function RootLayout() {
     } 
   }
 
+  function activeNavBar() {
+    const menu_btn = document.querySelector('.hamburger');
+    const mobile_btn = document.querySelector('.mobile-catagoryNav');
+    menu_btn.classList.add('is-active');
+    mobile_btn.classList.add('is-active');
+  }
+
   return (
     <>
         <header className="mainHeader">
             <nav className="mainNav">
                 <div className='hamburger_container'>
-                    <button className='hamburger'>
+                    <button className='hamburger' onClick={()=>activeNavBar()}>
                         <div className='bar'></div>
                     </button>
                     <NavLink className="amazonLogoContainer" onClick={() => setQuery('')} to="/"><img src={require("../assets/amazon_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
