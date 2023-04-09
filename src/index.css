@@ -42,6 +42,7 @@ footer {
 
 .mainLogo {
   cursor: pointer;
+  object-fit: contain;
 }
 
 .logoFooter {
@@ -835,6 +836,37 @@ footer {
   border-radius: 5px 0 0 5px;
 }
 
+.hamburger_container {
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger {
+  display: block;
+  width: 35px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+
+.bar, .hamburger::after, .hamburger::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: hsl(34, 82%, 45%);
+  margin: 6px 0px;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.hamburger::before {
+  margin-top: 0;
+}
 /* ------------------------- Media Query ---------------------------- */
 @media screen and (max-width: 1000px) {
   .indexMain {

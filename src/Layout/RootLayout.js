@@ -26,7 +26,12 @@ export default function RootLayout() {
     <>
         <header className="mainHeader">
             <nav className="mainNav">
-                <NavLink className="amazonLogoContainer" onClick={() => setQuery('')} to="/"><img src={require("../assets/amazon_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
+                <div className='hamburger_container'>
+                    <button className='hamburger'>
+                        <div className='bar'></div>
+                    </button>
+                    <NavLink className="amazonLogoContainer" onClick={() => setQuery('')} to="/"><img src={require("../assets/amazon_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
+                </div>
                 <div className="searchContainer">
                     <select className="dropdownMenu">
                         <option value="all">All</option>
