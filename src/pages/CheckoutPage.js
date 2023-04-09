@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
-import MobileNav from '../components/MobileNav';
 import { CartNum } from '../context/NumInCartContext'
 
 export default function CheckoutPage() {
@@ -8,7 +7,6 @@ export default function CheckoutPage() {
 
   return (
     <main className="thankYouPopUp subpageMain">
-        <MobileNav />
         <div>
             <img src={require("../assets/accept.png")} alt="tick icon" width="100px" />
         </div>

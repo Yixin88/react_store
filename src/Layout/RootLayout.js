@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import { CartNum } from '../context/NumInCartContext'
 import { SearchQuery } from '../context/QueryContext'
 import { nonActiveNavBar, activeNavBar } from '../util/AddOrRemoveMobileNav'
+import MobileNav from '../components/MobileNav';
 
 export default function RootLayout() {
   const {cart} = useContext(CartNum)
@@ -67,7 +68,7 @@ export default function RootLayout() {
                 <NavLink to='BuyAgain'>Buy Again</NavLink>
             </nav>
         </header>
-        
+        <MobileNav />
         <div onClick={() => nonActiveNavBar()} className='overlay'></div>
         <Outlet />
         

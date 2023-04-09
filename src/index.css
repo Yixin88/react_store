@@ -919,6 +919,11 @@ footer {
   color: rgb(250,132,30);
 }
 
+.mobile-catagoryNav .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .closeBtnContainer {
   display: flex;
   justify-content: space-between;
@@ -972,6 +977,14 @@ footer {
 
   .catagoryNav, .catagoryHr {
     display: none;
+  }
+
+  .mainNav {
+    padding: 0px 20px;
+  }
+  
+  .small-search-bar {
+    margin: 10px 1.5rem;
   }
 }
 

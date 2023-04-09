@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import CartProducts from '../components/CartProducts';
-import MobileNav from '../components/MobileNav';
 import { CartNum } from '../context/NumInCartContext'
 import ScrollToTop from '../util/ScrollToTop';
 
@@ -9,7 +8,6 @@ export default function Cart() {
   const {totalPrice, itemsInCart, clearCart } = useContext(CartNum);
   return (
     <main className='subpageMain cartPage'>
-      <MobileNav />
       <ScrollToTop />
       {itemsInCart.length === 0 ? 
       <div className='emptyCartMsg'>
