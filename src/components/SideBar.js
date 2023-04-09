@@ -1,17 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import { CategoryList } from '../context/CategoryContext'
+import { nonActiveNavBar } from '../util/AddOrRemoveMobileNav'
 
 export default function SideBar() {
     const { category } = useContext(CategoryList);
-
-    function nonActiveNavBar() {
-        const menu_btn = document.querySelector('.hamburger');
-        const mobile_btn = document.querySelector('.mobile-catagoryNav');
-        mobile_btn.classList.remove('is-active');
-        menu_btn.classList.remove('is-active');
-    }
 
     return (
     <>

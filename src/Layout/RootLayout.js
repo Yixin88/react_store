@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { CartNum } from '../context/NumInCartContext'
 import { SearchQuery } from '../context/QueryContext'
+import { nonActiveNavBar, activeNavBar } from '../util/AddOrRemoveMobileNav'
 
 export default function RootLayout() {
   const {cart} = useContext(CartNum)
@@ -20,13 +21,6 @@ export default function RootLayout() {
         document.getElementById('search').blur()
         document.getElementById('small-search').blur()
     } 
-  }
-
-  function activeNavBar() {
-    const menu_btn = document.querySelector('.hamburger');
-    const mobile_btn = document.querySelector('.mobile-catagoryNav');
-    menu_btn.classList.add('is-active');
-    mobile_btn.classList.add('is-active');
   }
 
   return (
@@ -74,6 +68,7 @@ export default function RootLayout() {
             </nav>
         </header>
         
+        <div onClick={() => nonActiveNavBar()} className='overlay'></div>
         <Outlet />
         
         <Footer />
