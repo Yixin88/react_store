@@ -961,7 +961,7 @@ footer {
 /* ------------------------- Media Query ---------------------------- */
 @media screen and (min-width: 1001px) {
   .hamburger {
-    display: none;
+    visibility: hidden;
   }
 }
 

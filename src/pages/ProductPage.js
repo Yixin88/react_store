@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import AddedToCartPopUp from '../components/AddedToCartPopUp';
+import MobileNav from '../components/MobileNav';
 import ProductDetails from '../components/ProductDetails';
 
 export default function ProductPage() {
@@ -22,6 +23,7 @@ export default function ProductPage() {
 
   return (
     <main className='subpageMain'>
+      <MobileNav />
         {loading ? <div className='productPageLoading'><h1>Loading...</h1></div>
             : 
             Object.keys(product).length !== 1 ? 
