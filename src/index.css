@@ -836,6 +836,15 @@ footer {
 }
 
 /* ------------------------- Media Query ---------------------------- */
+@media screen and (max-width: 1000px) {
+  .indexMain {
+    display: block;
+  }
+
+  .catagoryNav, .catagoryHr {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 750px) {
   .small-search-bar {
@@ -851,6 +860,7 @@ footer {
     white-space: nowrap;
   }
 }
+
 
 @media screen and (max-width: 500px) {
   .user {
