@@ -5,6 +5,7 @@ import { CartNum } from '../context/NumInCartContext'
 import { SearchQuery } from '../context/QueryContext'
 import { nonActiveNavBar, activeNavBar } from '../util/AddOrRemoveMobileNav'
 import MobileNav from '../components/MobileNav';
+import BackToTopBtn from '../components/BackToTopBtn'
 
 export default function RootLayout() {
   const {cart} = useContext(CartNum)
@@ -69,6 +70,7 @@ export default function RootLayout() {
             </nav>
         </header>
         <MobileNav />
+        <BackToTopBtn />
         <div onClick={() => nonActiveNavBar()} className='overlay'></div>
         <Outlet />
         
