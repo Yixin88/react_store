@@ -1014,7 +1014,7 @@ footer {
 }
 
 .to-top {
-  background-color: white;
+  background-color: rgb(250,132,30);
   position: fixed;
   bottom: 16px;
   right: 32px;
@@ -1025,7 +1025,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   opacity: 0;
   pointer-events: none;
