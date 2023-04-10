@@ -325,7 +325,7 @@ footer {
   font-size: 25px;
 }
 
-.productCard > button, .popUpAddToCartBtn {
+.productCard > button, .popUpAddToCartBtn, .addToCartBtn {
   grid-area: addToCart;
   padding: 10px;
   border: solid rgb(250,132,30);
@@ -335,6 +335,7 @@ footer {
   font-family: inherit;
   justify-self: flex-end;
   align-self: center;
+  transition: all .2s ease-in-out;
 }
 
 .thankYouPopUp > .keepBrowsingBtn {
@@ -351,7 +352,7 @@ footer {
   text-decoration: none;
 }
 
-.productCard > button:hover, .popUpAddToCartBtn:hover, .productPageLeft > button:hover, .keepBrowsingBtn:hover {
+.productCard > button:hover, .popUpAddToCartBtn:hover, .productPageLeft > button:hover, .keepBrowsingBtn:hover, .addToCartBtn:hover {
   border: solid rgb(255, 145, 0);
   filter: saturate(1.2);
   cursor: pointer;
@@ -799,6 +800,7 @@ footer {
 
 .subpageMain {
   flex: 1;
+  margin: 2rem;
 }
 
 .noResults {
@@ -967,6 +969,31 @@ footer {
   opacity: 1;
   pointer-events: all;
 }
+
+.giftContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 450px);
+  justify-content: center;
+  row-gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.giftCard {
+  border: rgb(164, 164, 164) solid;
+  display: flex;
+  width: clamp(300px, 60vw, 400px);
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.giftCard img {
+  width: 6rem;
+  justify-self: center;
+  object-fit: contain;
+}
+
 
 /* ------------------------- Media Query ---------------------------- */
 @media screen and (min-width: 1001px) {
