@@ -979,6 +979,7 @@ footer {
   margin-bottom: 2rem;
 }
 
+
 .giftCard {
   border: rgb(164, 164, 164) solid;
   display: flex;
@@ -986,12 +987,30 @@ footer {
   gap: 1rem;
   padding: 0.8rem;
   border-radius: 10px;
+  transition: all .2s ease-in-out;
+}
+
+.giftCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(33,33,33,.3);
 }
 
 .giftCard img {
   width: 6rem;
   justify-self: center;
   object-fit: contain;
+}
+
+.termsOl li::marker {
+  font-size: 1.2rem;
+}
+
+.termsOl li h3 {
+  margin-bottom: 0px;
+}
+
+.termsOl li p {
+  margin-top: 5px;
 }
 
 
