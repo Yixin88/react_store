@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import { CategoryList } from '../context/CategoryContext'
-import { nonActiveNavBar } from '../util/AddOrRemoveMobileNav'
 import MobileNav from './MobileNav'
 
 export default function SideBar() {

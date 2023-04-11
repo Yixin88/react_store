@@ -3,7 +3,6 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { CartNum } from '../context/NumInCartContext'
 import { SearchQuery } from '../context/QueryContext'
-import { nonActiveNavBar, activeNavBar } from '../util/AddOrRemoveMobileNav'
 import MobileNav from '../components/MobileNav';
 import BackToTopBtn from '../components/BackToTopBtn'
 
@@ -30,9 +29,7 @@ export default function RootLayout() {
         <header className="mainHeader">
             <nav className="mainNav">
                 <div className='hamburger_container'>
-                    <button className='hamburger' onClick={()=>activeNavBar()}>
-                        <div className='bar'></div>
-                    </button>
+                    <MobileNav />
                     <NavLink className="amazonLogoContainer" onClick={() => setQuery('')} to="/"><img src={require("../assets/amazon_logo.png")} alt="Amzon Logo" className="logo mainLogo" /></NavLink>
                 </div>
                 <div className="searchContainer">
@@ -69,9 +66,8 @@ export default function RootLayout() {
                 <NavLink to='BuyAgain'>Buy Again</NavLink>
             </nav>
         </header>
-        <MobileNav />
+        
         <BackToTopBtn />
-        <div onClick={() => nonActiveNavBar()} className='overlay'></div>
         <Outlet />
         
         <Footer />

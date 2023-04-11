@@ -20,8 +20,8 @@ export default function BackToTopBtn() {
       };
 
   return (
-    <a ref={toTop} onClick={scrollToTop} class="to-top">
-        <i class="fas fa-chevron-up"></i>
-    </a>
+    <button ref={toTop} onClick={scrollToTop} className="to-top">
+        <i className="fas fa-chevron-up"></i>
+    </button>
   )
 }
