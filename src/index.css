@@ -1126,6 +1126,28 @@ footer {
   .small-search-bar {
     margin: 10px 1.5rem;
   }
+
+  .productPageContent {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+  .productPageLeft {
+    height: 20rem;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  
+  .productPageRight {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .productPageRight > * {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 870px) {
