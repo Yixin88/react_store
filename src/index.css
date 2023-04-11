@@ -1056,6 +1056,53 @@ footer {
   pointer-events: auto;
   opacity: 1;
 }
+
+.slider {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: hidden;
+  box-shadow: 0 0 30px rgba(33,33,33,.3);
+  border-radius: 0.5rem;
+}
+
+.slider a {
+  display: flex;
+  overflow-x: hidden;
+  flex: 1 0 100%;
+  animation: 20s linear slideIn infinite;
+}
+
+.slider img {
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  32% {
+    transform: translateX(-100%);
+  }
+  65% {
+    transform: translateX(-100%);
+  }
+  67% {
+    transform: translateX(-200%);
+  }
+  97% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 /* ------------------------- Media Query ---------------------------- */
 @media screen and (min-width: 1001px) {
   .hamburger {
