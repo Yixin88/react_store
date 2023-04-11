@@ -22,7 +22,7 @@ export default function ProductPage() {
 
   return (
     <main className='subpageMain'>
-        {loading ? <div className='productPageLoading'><h1>Loading...</h1></div>
+        {loading ? <div className='productPageLoading'><h1 className='loadingText'>Loading...</h1></div>
             : 
             Object.keys(product).length !== 1 ? 
             <ProductDetails product={product} imageArray={imageArray} />

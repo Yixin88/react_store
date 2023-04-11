@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <section className='selection'>
-        {loading ? <h1>Loading...</h1> : filteredQuery()}
+        {loading ? <h1 className='loadingText'>Loading...</h1> : filteredQuery()}
         <AddedToCartPopUp />
     </section>
   )

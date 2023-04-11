@@ -231,6 +231,10 @@ footer {
   color: white;
 }
 
+.loadingText {
+  justify-self: center;
+}
+
 .catagoryNav {
   display: flex;
   flex-direction: column;
