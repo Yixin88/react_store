@@ -551,10 +551,10 @@ footer {
   align-items: center;
   padding: 10px;
   font-size: 1.3rem;
-  max-width: 60rem;
-  width: 100%;
+  max-width: 50rem;
+  width: 90%;
   min-height: 10rem;
-  min-width: 17rem;
+  min-width: 18rem;
 }
 
 .cartCard-right {
@@ -569,6 +569,7 @@ footer {
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .emptyCartMsg {
@@ -610,7 +611,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-self: center;
+  justify-content: center;
 }
 
 .cartCardImg {
@@ -1184,10 +1185,6 @@ footer {
   .mobile-catagoryNav {
     width: 300px;
   }
-  
-  .cartCard-right {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 670px) {
@@ -1201,6 +1198,10 @@ footer {
 
   .cartCartDetail, .cartCartProduct {
     font-size: 1.2rem;
+  }
+
+  .cartCard-right {
+    flex-direction: column;
   }
 }
 
