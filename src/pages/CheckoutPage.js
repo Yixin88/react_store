@@ -13,7 +13,7 @@ export default function CheckoutPage() {
         <h3>Thank You!</h3>
         <p>Your order has been placed!</p>
         <p>🚚 Expected to be delivered within 3-5 business days 🚚</p>
-        <p>Your order of {prevItemsInCart.current.cart} {prevItemsInCart.current.cart > 1 ? 'items' : 'item'} with a total of £{prevItemsInCart.current.totalPrice} </p>
+        {prevItemsInCart.current !== undefined && <p>Your order of {prevItemsInCart.current.cart} {prevItemsInCart.current.cart > 1 ? 'items' : 'item'} with a total of £{prevItemsInCart.current.totalPrice} </p>}
         <NavLink to='/' className="keepBrowsingBtn">Continue Browsing</NavLink>
     </main>
   )
