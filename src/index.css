@@ -292,7 +292,7 @@ footer {
                        "price addToCart";
   grid-template-rows: 9fr 1fr 1fr 1fr ;
   grid-template-columns: 1fr 1fr ;
-  height: 400px;
+  height: 450px;
   align-items: center;
   padding: 10px;
   position: relative;
