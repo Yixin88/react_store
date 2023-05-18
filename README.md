@@ -26,6 +26,6 @@
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
-<img src=''/>
+<img src='https://github.com/Yixin88/react_store/blob/main/src/assets/amazonreactspa.netlify.app_.png?raw=true'/>
 
 </div>
