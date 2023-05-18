@@ -1,24 +1,24 @@
-<div align='center'><img style="width:30%" src='https://raw.githubusercontent.com/Yixin88/car-rental/main/src/images/logo/logo.png'/></div>
+<div align='center'><img style="width:30%" src='https://github.com/Yixin88/react_store/blob/main/src/assets/Amazon_logo2.png?raw=true'/></div>
 
 <h2>About the project</h2>
 
-  <p>A <b>car rental</b> website is an online platform that allows users to rent cars for personal or business use. The website provides an easy-to-use interface for searching, comparing, and reserving cars from a wide selection of vehicles that vary in make, model, size, and price.</p>
+  <p>A look-a-like <b>Amazon E-Commerce Store</b> is an online shopping website, allows customers to view product and buy product, with an easy to use interface for browsing within category, searching and checking details of each product on the site.</p>
 
-👉 Live Demo: <a target='_blank' href='https://car-rental-now.netlify.app/'>Live Demo</a>
+👉 Live Demo: <a target='_blank' href='https://amazonreactspa.netlify.app/'>Live Demo</a>
 
 <h3>Build with:</h3>
 
-» Sass / Scss <br>
-» React JS
+» React JS <br>
+» Vanilla CSS
 
 <h3>Features:</h3>
 
 » Responsive site for all devices <br>
 » Routing with 404 handling page <br>
-» Custom sub-pages with breadcrumbs <br>
-» Booking and popup form with form validations <br>
-» Fleet info and images <br>
-» Picking car from fleet will auto fill booking form <br>
+» Custom sub-pages for each products <br>
+» Search and filtering functionality <br>
+» Cart update and delete <br>
+» Lazy loading <br>
 » All reusable components <br>
 
 <h2>Screenshots of the Project 📸</h2>
@@ -26,6 +26,6 @@
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
-<img src='https://user-images.githubusercontent.com/105128267/218077675-f50ac9ae-8d2c-4196-aed8-f4490e142960.png'/>
+<img src=''/>
 
 </div>
