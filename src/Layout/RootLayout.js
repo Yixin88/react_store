@@ -61,9 +61,12 @@ export default function RootLayout() {
             <nav className="subHeader">
                 <NavLink to='deals'>Today's Deals</NavLink>
                 <NavLink to='gift'>Gift Cards & Top Up</NavLink>
-                <NavLink to='DimeVideo'>Dime Video</NavLink>
+                {/* <NavLink to='DimeVideo'>Dime Video</NavLink>
                 <NavLink to='vouchers'>Vouchers</NavLink>
-                <NavLink to='BuyAgain'>Buy Again</NavLink>
+                <NavLink to='BuyAgain'>Buy Again</NavLink> */}
+                <a href='#'>Dime Video</a>
+                <a href='#'>Vouchers</a>
+                <a href='#'>Buy Again</a>
             </nav>
         </header>
         
