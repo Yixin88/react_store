@@ -32,11 +32,11 @@ export default function ProductDetails({product, imageArray}) {
   return (
     <div className='productPageContent'>
                 <div className="productPageLeft">
-                    <button className="prevImg" onClick={() => prevImage(imageIndex)}>&#10094;</button>
+                    <button className="prevImg" onClick={() => prevImage(imageIndex)}><i class="fa-solid fa-chevron-left"></i></button>
                     <div className="productPageLeftImg">
                         <img className="productImg" src={imageArray[imageIndex]} alt='product thumbnail'/>
                     </div>
-                    <button className="nextImg" onClick={() => nextImage(imageIndex)}>&#10095;</button>
+                    <button className="nextImg" onClick={() => nextImage(imageIndex)}><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
                 <div className='productPageRight'>
                     <h1 className="productTitle">{product.title.charAt(0).toUpperCase() + product.title.slice(1)}</h1>
