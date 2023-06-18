@@ -27,7 +27,7 @@ export default function MobileNav() {
         <nav ref={mobileNavBar} className='mobile-catagoryNav'>
             <div className='closeBtnContainer'>
                 <h3 className='mobile-category-title'>Category</h3>
-                <button className='closeNavBtn' onClick={() => nonActiveNavBar()}>x</button>
+                <button className='closeNavBtn' onClick={() => nonActiveNavBar()}><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div className='mobileNavCategoryContainer'>
                 {category.map((item)=> {
